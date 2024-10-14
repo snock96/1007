@@ -14,7 +14,7 @@
     html,body{
       width: 100%;
       height: 100%;
-      background-color: deepskyblue;
+      background-color: skyblue;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -50,28 +50,17 @@
 
   <script>
     const letters = document.querySelectorAll('.letter');
-    const letterContainer = document.querySelector('#design');
 
-    letterContainer.addEventListener('click', function() {
-      letters.forEach(function(Letter, index) {
-        setTimeout(() => {
+document.querySelector('#design').addEventListener('click', function() {
+  letters.forEach((Letter, index) => {
+    setTimeout(() => {
       Letter.style.transform = 'scaleY(2)';
     }, index * 100);
     setTimeout(() => {
       Letter.style.transform = 'scaleY(1)';
     }, (index * 100 ) + 500);
-      })
-    })
-// document.querySelector('#design').addEventListener('click', function() {
-//   letters.forEach((Letter, index) => {
-//     setTimeout(() => {
-//       Letter.style.transform = 'scaleY(2)';
-//     }, index * 100);
-//     setTimeout(() => {
-//       Letter.style.transform = 'scaleY(1)';
-//     }, (index * 100 ) + 500);
-//   })
-// })
+  })
+})
 
   </script>
 </body>
